@@ -4,7 +4,13 @@ try {
     $pass = 'insurgent1!';
     $db = 'crypto_armory';
     $dbConnection = new mysqli('localhost', $user, $pass, $db, 4307);
-    echo "
+
+}catch(Exception $ex){
+// to do
+    echo $ex->getMessage();
+}
+
+echo "
 <!DOCTYPE html>
 <html lang='en' class='min-vh-100 min-vw-100'>
 <head>
@@ -48,6 +54,3 @@ try {
     </div>
 </body>
 ";
-}catch(Exception $ex){
-// to do
-}

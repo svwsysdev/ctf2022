@@ -6,7 +6,9 @@ try {
     $dbConnection = new mysqli('localhost', $user, $pass, $db, 4307) || die("Database connection not available!!!");
 }catch(Exception $ex){
 // to do
+    echo $ex->getMessage();
 }
+
 echo "
 <!DOCTYPE html>
 <html lang='en' class='min-vh-100 min-vw-100'>

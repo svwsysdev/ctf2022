@@ -3,8 +3,7 @@ try {
     $user = 'insurgent';
     $pass = 'insurgent1!';
     $db = 'crypto_armory';
-    $dbConnection = new mysqli('localhost', $user, $pass, $db, 4307);
-
+    $dbConnection = new mysqli('localhost', $user, $pass, $db, 4307) || die("Database connection not available!!!");
 }catch(Exception $ex){
 // to do
     echo $ex->getMessage();

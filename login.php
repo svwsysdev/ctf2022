@@ -3,8 +3,11 @@ try {
     $user = 'insurgent';
     $pass = 'insurgent1!';
     $db = 'crypto_armory';
-    $dbConnection = new mysqli('localhost', $user, $pass, $db, 4307);
-    echo "
+    $dbConnection = new mysqli('localhost', $user, $pass, $db, 4307) || die("Database connection not available!!!");
+}catch(Exception $ex){
+// to do
+}
+echo "
 <!DOCTYPE html>
 <html lang='en' class='min-vh-100 min-vw-100'>
 <head>
@@ -48,6 +51,3 @@ try {
     </div>
 </body>
 ";
-}catch(Exception $ex){
-// to do
-}
